@@ -1,19 +1,21 @@
 # Synthetic Monitoring Platform
 This project is a Synthetic Monitoring Platform that collects and exposes network metrics like Round-Trip Time (RTT), Packet Loss, and other relevant statistics using Prometheus and visualizes them with Grafana.
 
-Project Structure
+**Project Structure**
 config.yml: This file contains the server addresses to be monitored and the interval for pinging.
 networkMonitor.py: Contains functions for performing ping operations and extracting metrics.
 pingMonitor.py: The main script that runs the ping operations, collects metrics, and exposes them to Prometheus.
 readYAML.py: Handles loading and parsing the YAML configuration file.
 prometheus.yml: Configuration file for setting up Prometheus to scrape metrics from the ping monitor.
-How to Set Up and Run the Platform
-Step 1: Clone the Repository
+
+**How to Set Up and Run the Platform**
+
+**Step 1: Clone the Repository**
 First, clone this repository to your local machine:
 
 git clone https://github.com/your-username/synthetic_monitoring_platform.git cd synthetic_monitoring_platform
 
-Step 2: Set Up Prometheus
+**Step 2: Set Up Prometheus**
 Install Prometheus: If Prometheus is not already installed on your machine, you can download it from the Prometheus website.
 
 Configure Prometheus:
@@ -26,7 +28,8 @@ Run the following command in your terminal to start Prometheus:
 ./prometheus --config.file=prometheus.yml
 
 Ensure that Prometheus is running by navigating to http://localhost:9090 in your web browser.
-Step 3: Set Up and Run the Synthetic Monitoring Platform
+
+**Step 3: Set Up and Run the Synthetic Monitoring Platform**
 Install Required Python Packages:
 
 Navigate to the directory where you cloned the repository and install the necessary Python packages:
@@ -46,7 +49,8 @@ Run the pingMonitor.py script to start the monitoring process:
 python pingMonitor.py
 
 The script will start pinging the specified servers at the defined interval and expose the collected metrics on http://localhost:8989.
-Step 4: Set Up Grafana
+
+**Step 4: Set Up Grafana**
 Install Grafana: If Grafana is not already installed, you can download it from the Grafana website.
 
 Start Grafana:
