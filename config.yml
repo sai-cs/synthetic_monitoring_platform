@@ -1,0 +1,5 @@
+servers:
+  - google.com
+  - amazon.com
+  - microsoft.com
+interval: 10
